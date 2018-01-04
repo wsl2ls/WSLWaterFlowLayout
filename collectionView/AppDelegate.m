@@ -3,7 +3,7 @@
 //  collectionView
 //
 //  Created by 王双龙 on 2017/10/16.
-//  Copyright © 2017年 王双龙. All rights reserved.
+//  Copyright © 2017年 https://www.jianshu.com/u/e15d1f644bea  All rights reserved.
 //
 
 #import "AppDelegate.h"
