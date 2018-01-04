@@ -1,3 +1,5 @@
+简书地址：https://www.jianshu.com/p/9fafd89c97ad
+
 ![瀑布流.gif](http://upload-images.jianshu.io/upload_images/1708447-9b76fe84ee5c24d8.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 >功能描述：[WSLWaterFlowLayout]() 是在继承于UICollectionViewLayout的基础上封装的控件， 目前支持竖向瀑布流(item等宽不等高、支持头脚视图)、水平瀑布流(item等高不等宽 不支持头脚视图)、竖向瀑布流( item等高不等宽、支持头脚视图)三种样式的瀑布流布局。
 
