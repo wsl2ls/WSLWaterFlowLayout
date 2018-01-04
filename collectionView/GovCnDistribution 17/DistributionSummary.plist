@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>GovCn.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>bitcode</key>
+			<false/>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>004402C6C4FFBB0BAC4AAAFCD69E809F3F08960E</string>
+				<key>dateExpires</key>
+				<string>2018/1/12</string>
+				<key>type</key>
+				<string>iOS Distribution</string>
+			</dict>
+			<key>embeddedBinaries</key>
+			<array>
+				<dict>
+					<key>architectures</key>
+					<array>
+						<string>armv7</string>
+						<string>arm64</string>
+					</array>
+					<key>bitcode</key>
+					<false/>
+					<key>certificate</key>
+					<dict>
+						<key>SHA1</key>
+						<string>004402C6C4FFBB0BAC4AAAFCD69E809F3F08960E</string>
+						<key>dateExpires</key>
+						<string>2018/1/12</string>
+						<key>type</key>
+						<string>iOS Distribution</string>
+					</dict>
+					<key>entitlements</key>
+					<dict>
+						<key>application-identifier</key>
+						<string>77HYQ2F8A2.cn.gov.www.app.NotificationService</string>
+						<key>beta-reports-active</key>
+						<true/>
+						<key>com.apple.developer.team-identifier</key>
+						<string>77HYQ2F8A2</string>
+						<key>get-task-allow</key>
+						<false/>
+						<key>keychain-access-groups</key>
+						<array>
+							<string>77HYQ2F8A2.cn.gov.www.app.NotificationService</string>
+						</array>
+					</dict>
+					<key>name</key>
+					<string>NotificationService.appex</string>
+					<key>profile</key>
+					<dict>
+						<key>UUID</key>
+						<string>0386e180-eaee-424c-8aaf-f181ef52fb45</string>
+						<key>name</key>
+						<string>GovCn NotificationService Distribution</string>
+					</dict>
+					<key>symbols</key>
+					<true/>
+					<key>team</key>
+					<dict>
+						<key>id</key>
+						<string>77HYQ2F8A2</string>
+						<key>name</key>
+						<string>Operations Center for the website of the State Council, P.R.C.</string>
+					</dict>
+				</dict>
+			</array>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>77HYQ2F8A2.cn.gov.www.app</string>
+				<key>aps-environment</key>
+				<string>production</string>
+				<key>beta-reports-active</key>
+				<true/>
+				<key>com.apple.developer.team-identifier</key>
+				<string>77HYQ2F8A2</string>
+				<key>get-task-allow</key>
+				<false/>
+			</dict>
+			<key>name</key>
+			<string>GovCn.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>0447ae21-757e-4814-bcf3-fee702a962ef</string>
+				<key>name</key>
+				<string>GovCn Distribution</string>
+			</dict>
+			<key>symbols</key>
+			<true/>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>77HYQ2F8A2</string>
+				<key>name</key>
+				<string>Operations Center for the website of the State Council, P.R.C.</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
