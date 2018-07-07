@@ -125,7 +125,7 @@
 //组内成员个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 4;
+    return 10;
 }
 
 // 返回每个cell
@@ -134,8 +134,10 @@
     
     waterCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ItemID" forIndexPath:indexPath];
     
-//    cell.imageV.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1.0];
-     cell.imageV.backgroundColor = [UIColor greenColor];
+//    cell.label.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1.0];
+     cell.label.backgroundColor = [UIColor greenColor];
+    
+    cell.label.text = [NSString stringWithFormat:@"%ld - %ld",indexPath.section, indexPath.row];
     
     return cell;
     

@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface waterCollectionViewCell : UICollectionViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *imageV;
+@property (weak, nonatomic) IBOutlet UILabel *label;
 @end

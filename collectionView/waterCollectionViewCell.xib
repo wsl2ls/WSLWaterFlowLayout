@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,29 +18,30 @@
                 <rect key="frame" x="0.0" y="0.0" width="201" height="78"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MNI-fP-ETh">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDa-ce-H8y">
                         <rect key="frame" x="0.0" y="0.0" width="201" height="78"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.4256108663" green="1" blue="0.037327104020000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="201" id="Zwq-vu-oIK"/>
-                            <constraint firstAttribute="height" constant="78" id="ctQ-Y8-Q7r"/>
+                            <constraint firstAttribute="width" constant="201" id="391-PY-kU2"/>
+                            <constraint firstAttribute="height" constant="78" id="wPc-4g-JNK"/>
                         </constraints>
-                    </imageView>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
             <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
-                <constraint firstItem="MNI-fP-ETh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="D1i-uA-vWO"/>
-                <constraint firstAttribute="trailing" secondItem="MNI-fP-ETh" secondAttribute="trailing" id="JpS-ry-8eM"/>
-                <constraint firstAttribute="bottom" secondItem="MNI-fP-ETh" secondAttribute="bottom" id="Mod-CI-uid"/>
-                <constraint firstItem="MNI-fP-ETh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="TOo-Nt-wDM"/>
+                <constraint firstAttribute="bottom" secondItem="RDa-ce-H8y" secondAttribute="bottom" id="74r-qf-Yvg"/>
+                <constraint firstAttribute="trailing" secondItem="RDa-ce-H8y" secondAttribute="trailing" id="8rI-cx-5Hm"/>
+                <constraint firstItem="RDa-ce-H8y" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Uq5-E2-fnh"/>
+                <constraint firstItem="RDa-ce-H8y" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="adZ-1W-UFX"/>
             </constraints>
             <size key="customSize" width="201" height="78"/>
             <connections>
-                <outlet property="imageV" destination="MNI-fP-ETh" id="NZN-H4-P23"/>
+                <outlet property="label" destination="RDa-ce-H8y" id="6Wj-sG-N7q"/>
             </connections>
-            <point key="canvasLocation" x="-508" y="39"/>
+            <point key="canvasLocation" x="39.5" y="153"/>
         </collectionViewCell>
     </objects>
 </document>
