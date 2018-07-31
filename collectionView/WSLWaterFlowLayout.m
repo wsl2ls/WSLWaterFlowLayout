@@ -172,7 +172,6 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
             [self.attrsArray addObject:headerAttrs];
         }
         
-        
         //开始创建组内的每一个cell的布局属性
         NSInteger rowCount = [self.collectionView numberOfItemsInSection:section];
         for (NSInteger row = 0; row < rowCount; row++) {
@@ -182,7 +181,6 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
             UICollectionViewLayoutAttributes *attrs = [self layoutAttributesForItemAtIndexPath:indexPath];
             [self.attrsArray addObject:attrs];
         }
-        
         
         //获取每一组脚视图footer的UICollectionViewLayoutAttributes
         if([self.delegate respondsToSelector:@selector(waterFlowLayout:sizeForFooterViewInSection:)]){

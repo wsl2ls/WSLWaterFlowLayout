@@ -79,14 +79,13 @@
     }else{
          return CGSizeMake(0, 0);
     }
-   
 }
 
-//头视图Size
+/** 头视图Size */
 -(CGSize )waterFlowLayout:(WSLWaterFlowLayout *)waterFlowLayout sizeForHeaderViewInSection:(NSInteger)section{
     return CGSizeMake(40, 40);
 }
-//脚视图Size
+/** 脚视图Size */
 -(CGSize )waterFlowLayout:(WSLWaterFlowLayout *)waterFlowLayout sizeForFooterViewInSection:(NSInteger)section{
     return CGSizeMake(40, 40);
 }
