@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,30 +21,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="11.png" translatesAutoresizingMaskIntoConstraints="NO" id="uri-sp-drz">
-                                <rect key="frame" x="59" y="229" width="297" height="278"/>
-                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="297" id="61o-R0-bPs"/>
-                                    <constraint firstAttribute="height" constant="278" id="O5G-d5-6WC"/>
-                                </constraints>
-                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WSLWaterFlowLayout" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JRI-1c-RME">
+                                <rect key="frame" x="0.0" y="303" width="414" height="131"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2018年 wsl. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxy-eZ-cS2">
+                                <rect key="frame" x="0.0" y="685" width="414" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="uri-sp-drz" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="39" id="KtJ-g5-Zta"/>
-                            <constraint firstItem="U0O-N4-3hk" firstAttribute="top" secondItem="uri-sp-drz" secondAttribute="bottom" constant="229" id="OZP-F0-mf1"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uri-sp-drz" secondAttribute="trailing" constant="38" id="V1n-Rl-0Xe"/>
-                            <constraint firstItem="uri-sp-drz" firstAttribute="top" secondItem="JYX-SW-UEN" secondAttribute="bottom" constant="209" id="kfx-6C-qXw"/>
+                            <constraint firstAttribute="trailing" secondItem="JRI-1c-RME" secondAttribute="trailing" id="GPP-f8-e7Z"/>
+                            <constraint firstItem="U0O-N4-3hk" firstAttribute="top" secondItem="kxy-eZ-cS2" secondAttribute="bottom" constant="31" id="PYS-6Z-OgA"/>
+                            <constraint firstItem="JRI-1c-RME" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Qn3-te-NEC"/>
+                            <constraint firstItem="JRI-1c-RME" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="Ylc-Ng-bvY"/>
+                            <constraint firstItem="JRI-1c-RME" firstAttribute="top" secondItem="JYX-SW-UEN" secondAttribute="bottom" constant="283" id="eZ4-ai-g9z"/>
+                            <constraint firstItem="JRI-1c-RME" firstAttribute="trailing" secondItem="kxy-eZ-cS2" secondAttribute="trailing" id="fSi-SB-en7"/>
+                            <constraint firstItem="JRI-1c-RME" firstAttribute="leading" secondItem="kxy-eZ-cS2" secondAttribute="leading" id="rAt-pp-j65"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52" y="374.66266866566718"/>
+            <point key="canvasLocation" x="50.724637681159422" y="374.18478260869568"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="11.png" width="344" height="344"/>
-    </resources>
 </document>

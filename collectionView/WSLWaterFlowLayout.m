@@ -128,7 +128,7 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
     
     [super prepareLayout];
     
-    if (self.flowLayoutStyle == WSLVerticalWaterFlow) {
+    if (self.flowLayoutStyle == WSLWaterFlowVerticalEqualWidth) {
         
         //清除以前计算的所有高度
         self.maxColumnHeight = 0;
@@ -137,7 +137,7 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
             [self.columnHeights addObject:@(self.edgeInsets.top)];
         }
         
-    }else if (self.flowLayoutStyle == WSLHorizontalWaterFlow){
+    }else if (self.flowLayoutStyle == WSLWaterFlowHorizontalEqualHeight){
         
         //清除以前计算的所有宽度
         self.maxRowWidth = 0;
@@ -146,7 +146,7 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
             [self.rowWidths addObject:@(self.edgeInsets.left)];
         }
         
-    }else if (self.flowLayoutStyle == WSLVHWaterFlow || self.flowLayoutStyle == WSLLineWaterFlow){
+    }else if (self.flowLayoutStyle == WSLWaterFlowVerticalEqualHeight || self.flowLayoutStyle == WSLLineWaterFlow){
         
         //记录最后一个的内容的横坐标和纵坐标
         self.maxColumnHeight = 0;
@@ -203,15 +203,15 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
     //设置布局属性
     UICollectionViewLayoutAttributes *attrs = [UICollectionViewLayoutAttributes  layoutAttributesForCellWithIndexPath:indexPath];
     
-    if (self.flowLayoutStyle == WSLVerticalWaterFlow) {
+    if (self.flowLayoutStyle == WSLWaterFlowVerticalEqualWidth) {
         
         attrs.frame = [self itemFrameOfVerticalWaterFlow:indexPath];
         
-    }else if (self.flowLayoutStyle == WSLHorizontalWaterFlow){
+    }else if (self.flowLayoutStyle == WSLWaterFlowHorizontalEqualHeight){
         
         attrs.frame = [self itemFrameOfHorizontalWaterFlow:indexPath];
         
-    }else if(self.flowLayoutStyle == WSLVHWaterFlow){
+    }else if(self.flowLayoutStyle == WSLWaterFlowVerticalEqualHeight){
         
         attrs.frame = [self itemFrameOfVHWaterFlow:indexPath];
         
@@ -315,15 +315,15 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
 //返回内容高度
 -(CGSize)collectionViewContentSize {
     
-    if (self.flowLayoutStyle == WSLVerticalWaterFlow) {
+    if (self.flowLayoutStyle == WSLWaterFlowVerticalEqualWidth) {
         
         return CGSizeMake(0, self.maxColumnHeight + self.edgeInsets.bottom);
         
-    }else if (self.flowLayoutStyle == WSLHorizontalWaterFlow){
+    }else if (self.flowLayoutStyle == WSLWaterFlowHorizontalEqualHeight){
         
         return CGSizeMake(self.maxRowWidth + self.edgeInsets.right, 0);
         
-    }else if(self.flowLayoutStyle == WSLVHWaterFlow){
+    }else if(self.flowLayoutStyle == WSLWaterFlowVerticalEqualHeight){
         
         return CGSizeMake(0 , self.maxColumnHeight + self.edgeInsets.bottom);
     }else if(self.flowLayoutStyle == WSLLineWaterFlow){
@@ -344,7 +344,7 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
     CGFloat collectionW = self.collectionView.frame.size.width;
     //设置布局属性item的frame
     CGFloat w = (collectionW - self.edgeInsets.left - self.edgeInsets.right - (self.columnCount - 1) * self.columnMargin) / self.columnCount;
-    CGFloat h = [self.delegate waterFlowLayout:self heightForItemAtIndexPath:indexPath itemWidth:w];
+    CGFloat h = [self.delegate waterFlowLayout:self sizeForItemAtIndexPath:indexPath].height;
     
     //找出高度最短的那一列
     NSInteger destColumn = 0;
@@ -438,7 +438,7 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
     CGFloat collectionH = self.collectionView.frame.size.height;
     //设置布局属性item的frame
     CGFloat h = (collectionH - self.edgeInsets.top - self.edgeInsets.bottom - (self.rowCount - 1) * self.rowMargin) / self.rowCount;
-    CGFloat w = [self.delegate waterFlowLayout:self widthForItemAtIndexPath:indexPath itemHeight:h];
+    CGFloat w = [self.delegate waterFlowLayout:self sizeForItemAtIndexPath:indexPath].width;
     
     //找出宽度最短的那一行
     NSInteger destRow = 0;
@@ -501,7 +501,7 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
         size = [self.delegate waterFlowLayout:self sizeForHeaderViewInSection:indexPath.section];
     }
     
-    if (self.flowLayoutStyle == WSLVerticalWaterFlow) {
+    if (self.flowLayoutStyle == WSLWaterFlowVerticalEqualWidth) {
         
         CGFloat x = 0;
         CGFloat y = self.maxColumnHeight == 0 ? self.edgeInsets.top : self.maxColumnHeight;
@@ -518,7 +518,7 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
         
         return CGRectMake(x , y, self.collectionView.frame.size.width, size.height);
         
-    }else if (self.flowLayoutStyle == WSLVHWaterFlow){
+    }else if (self.flowLayoutStyle == WSLWaterFlowVerticalEqualHeight){
         
         CGFloat x = 0;
         CGFloat y = self.maxColumnHeight == 0 ? self.edgeInsets.top : self.maxColumnHeight;
@@ -534,7 +534,7 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
         return CGRectMake(x , y, self.collectionView.frame.size.width, size.height);
         
         
-    }else if (self.flowLayoutStyle == WSLHorizontalWaterFlow){
+    }else if (self.flowLayoutStyle == WSLWaterFlowHorizontalEqualHeight){
         
         
         
@@ -552,7 +552,7 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
         size = [self.delegate waterFlowLayout:self sizeForFooterViewInSection:indexPath.section];
     }
     
-    if (self.flowLayoutStyle == WSLVerticalWaterFlow ) {
+    if (self.flowLayoutStyle == WSLWaterFlowVerticalEqualWidth ) {
         
         CGFloat x = 0;
         CGFloat y = size.height == 0 ? self.maxColumnHeight : self.maxColumnHeight + self.rowMargin;
@@ -566,7 +566,7 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
         
         return  CGRectMake(x , y, self.collectionView.frame.size.width, size.height);
         
-    }else if (self.flowLayoutStyle == WSLVHWaterFlow){
+    }else if (self.flowLayoutStyle == WSLWaterFlowVerticalEqualHeight){
         
         CGFloat x = 0;
         CGFloat y = size.height == 0 ? self.maxColumnHeight : self.maxColumnHeight + self.rowMargin;
@@ -578,7 +578,7 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
         
         return  CGRectMake(x , y, self.collectionView.frame.size.width, size.height);
         
-    }else if (self.flowLayoutStyle == WSLHorizontalWaterFlow){
+    }else if (self.flowLayoutStyle == WSLWaterFlowHorizontalEqualHeight){
         
         
         

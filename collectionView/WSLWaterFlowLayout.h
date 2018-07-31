@@ -8,10 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+
 typedef enum {
-    WSLVerticalWaterFlow = 0, /** 竖向瀑布流 item等宽不等高 */
-    WSLHorizontalWaterFlow = 1, /** 水平瀑布流 item等高不等宽 不支持头脚视图*/
-    WSLVHWaterFlow = 2,  /** 竖向瀑布流 item等高不等宽 */
+    WSLWaterFlowVerticalEqualWidth = 0, /** 竖向瀑布流 item等宽不等高 */
+    WSLWaterFlowHorizontalEqualHeight = 1, /** 水平瀑布流 item等高不等宽 不支持头脚视图*/
+    WSLWaterFlowVerticalEqualHeight= 2,  /** 竖向瀑布流 item等高不等宽 */
     WSLLineWaterFlow = 3 /** 线性布局 待完成，敬请期待 */
 } WSLFlowLayoutStyle; //样式
 
@@ -19,13 +20,13 @@ typedef enum {
 
 @protocol WSLWaterFlowLayoutDelegate <NSObject>
 
-/** 竖向瀑布流 item等宽不等高 */
--(CGFloat)waterFlowLayout:(WSLWaterFlowLayout *)waterFlowLayout heightForItemAtIndexPath:(NSIndexPath *)indexPath itemWidth:(CGFloat)itemWidth;
-
-/** 水平瀑布流 item等高不等宽 */
--(CGFloat)waterFlowLayout:(WSLWaterFlowLayout *)waterFlowLayout widthForItemAtIndexPath:(NSIndexPath *)indexPath itemHeight:(CGFloat)itemHeight;
-
-/** 竖向瀑布流 item等高不等宽 列数、行数无用*/
+/**
+ 返回item的大小
+ 注意：根据当前的瀑布流样式需知的事项：
+ 当样式为WSLWaterFlowVerticalEqualWidth 传入的size.width无效 ，所以可以是任意值，因为内部会根据样式自己计算布局
+ WSLWaterFlowHorizontalEqualHeight 传入的size.height无效 ，所以可以是任意值 ，因为内部会根据样式自己计算布局
+ WSLWaterFlowVerticalEqualHeight 传入的size都有效， 此时返回列数、行数的代理方法无效
+ */
 - (CGSize)waterFlowLayout:(WSLWaterFlowLayout *)waterFlowLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
 
 /** 头视图Size */

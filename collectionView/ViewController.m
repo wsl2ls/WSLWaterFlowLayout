@@ -68,20 +68,18 @@
 }
 
 #pragma mark - WSLWaterFlowLayoutDelegate
-
--(CGFloat)waterFlowLayout:(WSLWaterFlowLayout *)waterFlowLayout heightForItemAtIndexPath:(NSIndexPath *)indexPath itemWidth:(CGFloat)itemWidth{
-    
-    return arc4random() % 200;
-}
-
--(CGFloat)waterFlowLayout:(WSLWaterFlowLayout *)waterFlowLayout widthForItemAtIndexPath:(NSIndexPath *)indexPath itemHeight:(CGFloat)itemHeight{
-    
-    return arc4random() % 200;
-}
-
+//返回每个item大小
 - (CGSize)waterFlowLayout:(WSLWaterFlowLayout *)waterFlowLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    
-    return CGSizeMake(arc4random() % 200, 100);
+    if(_flow.flowLayoutStyle == (WSLFlowLayoutStyle)0){
+        return CGSizeMake(0, arc4random() % 200);
+    }else if (_flow.flowLayoutStyle == (WSLFlowLayoutStyle)1){
+        return CGSizeMake(arc4random() % 200, 0);
+    }else if (_flow.flowLayoutStyle == (WSLFlowLayoutStyle)2){
+         return CGSizeMake(arc4random() % 200, 100);
+    }else{
+         return CGSizeMake(0, 0);
+    }
+   
 }
 
 //头视图Size
