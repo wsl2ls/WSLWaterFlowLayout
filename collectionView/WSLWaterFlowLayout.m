@@ -157,6 +157,17 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
         [self.rowWidths removeAllObjects];
         [self.rowWidths addObject:@(self.edgeInsets.left)];
         
+    }else if(self.flowLayoutStyle == WSLWaterFlowHorizontalGrid){
+        
+        //记录最后一个的内容的横坐标和纵坐标
+        self.maxColumnHeight = 0;
+        
+        self.maxRowWidth = 0;
+        [self.rowWidths removeAllObjects];
+        for (NSInteger i = 0; i < 2; i++) {
+            [self.rowWidths addObject:@(self.edgeInsets.left)];
+        }
+        
     }
     
     //清除之前数组
@@ -225,6 +236,9 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
         
         attrs.transform = CGAffineTransformMakeScale(scale, scale);
         
+    }else if (self.flowLayoutStyle == WSLWaterFlowHorizontalGrid){
+        
+        attrs.frame = [self itemFrameOfHorizontalGridWaterFlow:indexPath];
     }
     
     return attrs;
@@ -326,7 +340,10 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
         return CGSizeMake(0 , self.maxColumnHeight + self.edgeInsets.bottom);
     }else if(self.flowLayoutStyle == WSLLineWaterFlow){
         
-        return CGSizeMake(self.maxRowWidth + self.edgeInsets.right , 0);;
+        return CGSizeMake(self.maxRowWidth + self.edgeInsets.right , 0);
+    }else if(self.flowLayoutStyle == WSLWaterFlowHorizontalGrid){
+        
+        return CGSizeMake(self.maxRowWidth + self.edgeInsets.right,self.collectionView.frame.size.height);
     }
     
     return CGSizeMake(0, 0);
@@ -462,6 +479,50 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
     CGFloat rowWidth = [self.rowWidths[destRow] doubleValue];
     if (self.maxRowWidth < rowWidth) {
         self.maxRowWidth = rowWidth ;
+    }
+    
+    return CGRectMake(x, y, w, h);
+    
+}
+
+- (CGRect)itemFrameOfHorizontalGridWaterFlow:(NSIndexPath *)indexPath{
+    
+    //collectionView的高度
+    CGFloat collectionH = self.collectionView.frame.size.height;
+    //设置布局属性item的frame
+    CGFloat h = [self.delegate waterFlowLayout:self sizeForItemAtIndexPath:indexPath].height;
+    CGFloat w = [self.delegate waterFlowLayout:self sizeForItemAtIndexPath:indexPath].width;
+    
+    CGFloat x = 0;
+    CGFloat y = 0;
+    
+    //找出宽度最短的那一行
+    NSInteger destRow = 0;
+    CGFloat minRowWidth = [self.rowWidths[destRow] doubleValue];
+    for (NSInteger i = 1; i < self.rowWidths.count; i++) {
+        //取出第i行
+        CGFloat rowWidth = [self.rowWidths[i] doubleValue];
+        if (minRowWidth > rowWidth) {
+            minRowWidth = rowWidth;
+            destRow = i;
+        }
+    }
+    
+    y = destRow == 0 ? self.edgeInsets.top : self.edgeInsets.top + h + self.rowMargin;
+    
+    x = [self.rowWidths[destRow] doubleValue] == self.edgeInsets.left ? self.edgeInsets.left : [self.rowWidths[destRow] doubleValue] + self.columnMargin;
+    //更新最短那行的宽度
+    if (h >= collectionH - self.edgeInsets.bottom - self.edgeInsets.top) {
+        x = [self.rowWidths[destRow] doubleValue] == self.edgeInsets.left ? self.edgeInsets.left : self.maxRowWidth + self.columnMargin;
+        for (NSInteger i = 0; i < 2; i++) {
+            self.rowWidths[i] = @(x + w);
+        }
+    }else{
+        self.rowWidths[destRow] = @(x + w);
+    }
+    //记录最大宽度
+    if (self.maxRowWidth < x + w) {
+        self.maxRowWidth = x + w ;
     }
     
     return CGRectMake(x, y, w, h);

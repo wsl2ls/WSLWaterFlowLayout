@@ -12,8 +12,9 @@
 typedef enum {
     WSLWaterFlowVerticalEqualWidth = 0, /** 竖向瀑布流 item等宽不等高 */
     WSLWaterFlowHorizontalEqualHeight = 1, /** 水平瀑布流 item等高不等宽 不支持头脚视图*/
-    WSLWaterFlowVerticalEqualHeight= 2,  /** 竖向瀑布流 item等高不等宽 */
-    WSLLineWaterFlow = 3 /** 线性布局 待完成，敬请期待 */
+    WSLWaterFlowVerticalEqualHeight = 2,  /** 竖向瀑布流 item等高不等宽 */
+    WSLWaterFlowHorizontalGrid = 3,  /** 特为国务院客户端原创栏目滑块样式定制-栅格布局 仅供学习交流*/
+    WSLLineWaterFlow = 4 /** 线性布局 待完成，敬请期待 */
 } WSLFlowLayoutStyle; //样式
 
 @class WSLWaterFlowLayout;
@@ -25,7 +26,8 @@ typedef enum {
  注意：根据当前的瀑布流样式需知的事项：
  当样式为WSLWaterFlowVerticalEqualWidth 传入的size.width无效 ，所以可以是任意值，因为内部会根据样式自己计算布局
  WSLWaterFlowHorizontalEqualHeight 传入的size.height无效 ，所以可以是任意值 ，因为内部会根据样式自己计算布局
- WSLWaterFlowVerticalEqualHeight 传入的size都有效， 此时返回列数、行数的代理方法无效
+ WSLWaterFlowHorizontalGrid   传入的size宽高都有效， 此时返回列数、行数的代理方法无效，
+ WSLWaterFlowVerticalEqualHeight 传入的size宽高都有效， 此时返回列数、行数的代理方法无效
  */
 - (CGSize)waterFlowLayout:(WSLWaterFlowLayout *)waterFlowLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
 

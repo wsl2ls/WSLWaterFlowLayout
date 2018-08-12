@@ -23,9 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray * array = @[@"样式1",@"样式2",@"样式3"];
-    for (int i = 0; i < 3; i++) {
-        UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake((self.view.frame.size.width - 3 * 60)/4 + i * (60 + (self.view.frame.size.width - 3 * 60)/4),24, 60, 40)];
+    NSArray * array = @[@"样式1",@"样式2",@"样式3",@"样式4"];
+    for (int i = 0; i < array.count; i++) {
+        UIButton * button = [[UIButton alloc] initWithFrame:CGRectMake((self.view.frame.size.width - array.count * 60)/(array.count + 1) + i * (60 + (self.view.frame.size.width - array.count * 60)/(array.count + 1)),24, 60, 40)];
         button.tag = i;
         [button setTitle:array[i] forState:UIControlStateNormal];
         [button addTarget:self action:@selector(btnClicked:) forControlEvents:UIControlEventTouchUpInside];
@@ -57,25 +57,43 @@
 - (void)btnClicked:(UIButton *)button{
     
     _flow.flowLayoutStyle = (WSLFlowLayoutStyle)button.tag;
-  
-    for (UIView * collection in self.view.subviews) {
-        if ([collection isKindOfClass: [UICollectionView class]]) {
-             [(UICollectionView *)collection scrollsToTop];
-            [(UICollectionView *)collection reloadData];
-        }
-    }
     
+    if (_flow.flowLayoutStyle == (WSLFlowLayoutStyle)3){
+        //每一个最小的正方形单元格的边长
+        CGFloat  average = (self.view.frame.size.width - [self edgeInsetInWaterFlowLayout:_flow].left * 2 - 3 * [self columnMarginInWaterFlowLayout:_flow])/4.0;
+        _flow.collectionView.frame = CGRectMake(0, 64, self.view.frame.size.width, average * 2 + [self rowMarginInWaterFlowLayout:_flow] + [self edgeInsetInWaterFlowLayout:_flow].top + [self edgeInsetInWaterFlowLayout:_flow].bottom);
+    }else{
+        _flow.collectionView.frame = CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64);
+    }
+
+    [_flow.collectionView scrollsToTop];
+    [_flow.collectionView  reloadData];
+    
+}
+
+#pragma mark - Help Methods
+//返回样式4所需的宽高信息
+- (NSArray *)proportionsForItem{
+    NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"WSLWaterFlowHorizontalGrid" ofType:@"plist"];
+    NSArray * layoutInfo= [[NSArray alloc] initWithContentsOfFile:plistPath];
+    return layoutInfo;
 }
 
 #pragma mark - WSLWaterFlowLayoutDelegate
 //返回每个item大小
 - (CGSize)waterFlowLayout:(WSLWaterFlowLayout *)waterFlowLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
-    if(_flow.flowLayoutStyle == (WSLFlowLayoutStyle)0){
+    if(waterFlowLayout.flowLayoutStyle == (WSLFlowLayoutStyle)0){
         return CGSizeMake(0, arc4random() % 200);
-    }else if (_flow.flowLayoutStyle == (WSLFlowLayoutStyle)1){
+    }else if (waterFlowLayout.flowLayoutStyle == (WSLFlowLayoutStyle)1){
         return CGSizeMake(arc4random() % 200, 0);
-    }else if (_flow.flowLayoutStyle == (WSLFlowLayoutStyle)2){
+    }else if (waterFlowLayout.flowLayoutStyle == (WSLFlowLayoutStyle)2){
          return CGSizeMake(arc4random() % 200, 100);
+    }else if (waterFlowLayout.flowLayoutStyle == (WSLFlowLayoutStyle)3){
+                 //每一个最小的正方形单元格的边长
+        CGFloat  average = (self.view.frame.size.width - [self edgeInsetInWaterFlowLayout:waterFlowLayout].left * 2 - 3 * [self columnMarginInWaterFlowLayout:waterFlowLayout])/4.0;
+        NSDictionary * proportion = [self proportionsForItem][indexPath.row];
+        CGSize itemSize =  CGSizeMake(average * [proportion[@"width"] intValue]+ ([proportion[@"width"] intValue] == 2 ? [self columnMarginInWaterFlowLayout:waterFlowLayout] : 0), average * [proportion[@"height"] intValue] + ([proportion[@"height"] intValue] == 2 ? [self rowMarginInWaterFlowLayout:waterFlowLayout] : 0));
+        return itemSize;
     }else{
          return CGSizeMake(0, 0);
     }
@@ -100,14 +118,17 @@
 }
 /** 列间距*/
 -(CGFloat)columnMarginInWaterFlowLayout:(WSLWaterFlowLayout *)waterFlowLayout{
-    return 10;
+    return 5;
 }
 /** 行间距*/
 -(CGFloat)rowMarginInWaterFlowLayout:(WSLWaterFlowLayout *)waterFlowLayout{
-    return 10;
+    return 5;
 }
 /** 边缘之间的间距*/
 -(UIEdgeInsets)edgeInsetInWaterFlowLayout:(WSLWaterFlowLayout *)waterFlowLayout{
+    if (waterFlowLayout.flowLayoutStyle == (WSLFlowLayoutStyle)3){
+        return UIEdgeInsetsMake(20, 20, 20, 20);
+    }
     return UIEdgeInsetsMake(10, 10, 10, 10);
 }
 
@@ -116,12 +137,18 @@
 
 //组个数
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
+    if (_flow.flowLayoutStyle == (WSLFlowLayoutStyle)3){
+        return 1;
+    }
     return 3;
 }
 
 //组内成员个数
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
+    if (_flow.flowLayoutStyle == (WSLFlowLayoutStyle)3){
+        return [self proportionsForItem].count;
+    }
     return 10;
 }
 
@@ -131,15 +158,15 @@
     
     waterCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ItemID" forIndexPath:indexPath];
     
-//    cell.label.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1.0];
-     cell.label.backgroundColor = [UIColor greenColor];
+    cell.label.backgroundColor = [UIColor colorWithRed:arc4random()%255/255.0 green:arc4random()%255/255.0 blue:arc4random()%255/255.0 alpha:1.0];
+//     cell.label.backgroundColor = [UIColor greenColor];
     
     cell.label.text = [NSString stringWithFormat:@"%ld - %ld",indexPath.section, indexPath.row];
     
     return cell;
     
 }
-
+//返回头脚视图
 - (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         CollectionHeaderAndFooterView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"sectionHeader" forIndexPath:indexPath];

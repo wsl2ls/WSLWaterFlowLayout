@@ -23,8 +23,8 @@
 		316638F91F948478008137BD /* waterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 316638F71F948478008137BD /* waterCollectionViewCell.m */; };
 		316638FA1F948478008137BD /* waterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 316638F81F948478008137BD /* waterCollectionViewCell.xib */; };
 		316638FF1F948EEE008137BD /* WSLWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 316638FE1F948EEE008137BD /* WSLWaterFlowLayout.m */; };
+		317C217A21200400007EBF96 /* WSLWaterFlowHorizontalGrid.plist in Resources */ = {isa = PBXBuildFile; fileRef = 317C217921200400007EBF96 /* WSLWaterFlowHorizontalGrid.plist */; };
 		31B6F2691FB0066C000D6A30 /* UIButton+WSLTitleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B6F2681FB0066C000D6A30 /* UIButton+WSLTitleImage.m */; };
-		31B6F26B1FB02F03000D6A30 /* 12.png in Sources */ = {isa = PBXBuildFile; fileRef = 31B6F26A1FB02EB7000D6A30 /* 12.png */; };
 		31CFF0CF1F9749000078C991 /* CollectionHeaderAndFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CFF0CD1F9749000078C991 /* CollectionHeaderAndFooterView.m */; };
 		31CFF0D01F9749000078C991 /* CollectionHeaderAndFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31CFF0CE1F9749000078C991 /* CollectionHeaderAndFooterView.xib */; };
 /* End PBXBuildFile section */
@@ -73,9 +73,9 @@
 		316638F81F948478008137BD /* waterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = waterCollectionViewCell.xib; sourceTree = "<group>"; };
 		316638FD1F948EEE008137BD /* WSLWaterFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSLWaterFlowLayout.h; sourceTree = "<group>"; };
 		316638FE1F948EEE008137BD /* WSLWaterFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSLWaterFlowLayout.m; sourceTree = "<group>"; };
+		317C217921200400007EBF96 /* WSLWaterFlowHorizontalGrid.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = WSLWaterFlowHorizontalGrid.plist; sourceTree = "<group>"; };
 		31B6F2671FB0066C000D6A30 /* UIButton+WSLTitleImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+WSLTitleImage.h"; sourceTree = "<group>"; };
 		31B6F2681FB0066C000D6A30 /* UIButton+WSLTitleImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WSLTitleImage.m"; sourceTree = "<group>"; };
-		31B6F26A1FB02EB7000D6A30 /* 12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 12.png; sourceTree = "<group>"; };
 		31CFF0CC1F9749000078C991 /* CollectionHeaderAndFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionHeaderAndFooterView.h; sourceTree = "<group>"; };
 		31CFF0CD1F9749000078C991 /* CollectionHeaderAndFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionHeaderAndFooterView.m; sourceTree = "<group>"; };
 		31CFF0CE1F9749000078C991 /* CollectionHeaderAndFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderAndFooterView.xib; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 				311CF0391FBE8BA300341F10 /* Logo@2x.png */,
 				311CF03C1FBE8BA400341F10 /* Logo@3x.png */,
 				3105466E1F95957500E5E770 /* 11.png */,
-				31B6F26A1FB02EB7000D6A30 /* 12.png */,
+				317C217921200400007EBF96 /* WSLWaterFlowHorizontalGrid.plist */,
 				316638C11F945965008137BD /* AppDelegate.h */,
 				316638C21F945965008137BD /* AppDelegate.m */,
 				316638C41F945965008137BD /* ViewController.h */,
@@ -284,6 +284,7 @@
 			files = (
 				31CFF0D01F9749000078C991 /* CollectionHeaderAndFooterView.xib in Resources */,
 				316638CE1F945965008137BD /* LaunchScreen.storyboard in Resources */,
+				317C217A21200400007EBF96 /* WSLWaterFlowHorizontalGrid.plist in Resources */,
 				316638CB1F945965008137BD /* Assets.xcassets in Resources */,
 				316638FA1F948478008137BD /* waterCollectionViewCell.xib in Resources */,
 				316638C91F945965008137BD /* Main.storyboard in Resources */,
@@ -315,7 +316,6 @@
 				311CF03E1FBE8BAA00341F10 /* CD@3x.png in Sources */,
 				311CF03F1FBE8BAA00341F10 /* Logo@2x.png in Sources */,
 				311CF0401FBE8BAA00341F10 /* Logo@3x.png in Sources */,
-				31B6F26B1FB02F03000D6A30 /* 12.png in Sources */,
 				3105466F1F95959E00E5E770 /* 11.png in Sources */,
 				316638C61F945965008137BD /* ViewController.m in Sources */,
 				316638D11F945965008137BD /* main.m in Sources */,
