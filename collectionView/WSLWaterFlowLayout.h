@@ -13,7 +13,7 @@ typedef enum {
     WSLWaterFlowVerticalEqualWidth = 0, /** 竖向瀑布流 item等宽不等高 */
     WSLWaterFlowHorizontalEqualHeight = 1, /** 水平瀑布流 item等高不等宽 不支持头脚视图*/
     WSLWaterFlowVerticalEqualHeight = 2,  /** 竖向瀑布流 item等高不等宽 */
-    WSLWaterFlowHorizontalGrid = 3,  /** 特为国务院客户端原创栏目滑块样式定制-栅格布局 仅供学习交流*/
+    WSLWaterFlowHorizontalGrid = 3,  /** 特为国务院客户端原创栏目滑块样式定制-水平栅格布局  仅供学习交流*/
     WSLLineWaterFlow = 4 /** 线性布局 待完成，敬请期待 */
 } WSLFlowLayoutStyle; //样式
 

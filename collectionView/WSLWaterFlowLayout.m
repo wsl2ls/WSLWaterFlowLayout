@@ -485,6 +485,7 @@ static const UIEdgeInsets WSLDefaultEdgeInset = {10, 10, 10, 10};
     
 }
 
+//水平栅格布局
 - (CGRect)itemFrameOfHorizontalGridWaterFlow:(NSIndexPath *)indexPath{
     
     //collectionView的高度
