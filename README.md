@@ -1,7 +1,8 @@
 简书地址：https://www.jianshu.com/p/9fafd89c97ad
 
-![瀑布流.gif](http://upload-images.jianshu.io/upload_images/1708447-9b76fe84ee5c24d8.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
->功能描述：[WSLWaterFlowLayout]() 是在继承于UICollectionViewLayout的基础上封装的控件， 目前支持竖向瀑布流(item等宽不等高、支持头脚视图)、水平瀑布流(item等高不等宽 不支持头脚视图)、竖向瀑布流( item等高不等宽、支持头脚视图)三种样式的瀑布流布局。
+![瀑布流](https://upload-images.jianshu.io/upload_images/1708447-84b73788d3b71991.gif?imageMogr2/auto-orient/strip)
+
+>功能描述：[WSLWaterFlowLayout]() 是在继承于UICollectionViewLayout的基础上封装的控件， 目前支持竖向瀑布流(item等宽不等高、支持头脚视图)、水平瀑布流(item等高不等宽 不支持头脚视图)、竖向瀑布流( item等高不等宽、支持头脚视图)、栅格布局瀑布流 4种样式的瀑布流布局。
 
 * 前言 ：近几个月一直在忙公司的ChinaDaily和国务院项目，没有抽出时间来写简书，现在终于算是告一段落了，抽出时间来更一篇😁
 
@@ -78,7 +79,9 @@ typedef enum {
     _flow.delegate = self;
     _flow.flowLayoutStyle = WSLVerticalWaterFlow;
 ```
-好了，有需要的直接去这里瞅瞅吧[WSLWaterFlowLayout]()
+>更新于2018/8/12：   新增样式4-栅格布局样式的瀑布流，如下图
+
+![栅格布局样式](https://upload-images.jianshu.io/upload_images/1708447-baecc8e82b7c2eae.gif?imageMogr2/auto-orient/strip)
 
 ![赞.gif](http://upload-images.jianshu.io/upload_images/1708447-ce06388c244874ce.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
