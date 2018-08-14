@@ -25,23 +25,25 @@
 下面是WSLWaterFlowLayout.h中的属性方法和代理方法，含义注释的还算清晰：
 ```
 typedef enum {
-    WSLVerticalWaterFlow = 0, /** 竖向瀑布流 item等宽不等高 */
-    WSLHorizontalWaterFlow = 1, /** 水平瀑布流 item等高不等宽 不支持头脚视图*/
-    WSLVHWaterFlow = 2,  /** 竖向瀑布流 item等高不等宽 */
-    WSLLineWaterFlow = 3 /** 线性布局 待完成，敬请期待 */
-} WSLFlowLayoutStyle;//样式
+    WSLWaterFlowVerticalEqualWidth = 0, /** 竖向瀑布流 item等宽不等高 */
+    WSLWaterFlowHorizontalEqualHeight = 1, /** 水平瀑布流 item等高不等宽 不支持头脚视图*/
+    WSLWaterFlowVerticalEqualHeight = 2,  /** 竖向瀑布流 item等高不等宽 */
+    WSLWaterFlowHorizontalGrid = 3,  /** 特为国务院客户端原创栏目滑块样式定制-水平栅格布局  仅供学习交流*/
+    WSLLineWaterFlow = 4 /** 线性布局 待完成，敬请期待 */
+} WSLFlowLayoutStyle; //样式
 
 @class WSLWaterFlowLayout;
 
 @protocol WSLWaterFlowLayoutDelegate <NSObject>
 
-/** 竖向瀑布流 item等宽不等高 */
--(CGFloat)waterFlowLayout:(WSLWaterFlowLayout *)waterFlowLayout heightForItemAtIndexPath:(NSIndexPath *)indexPath itemWidth:(CGFloat)itemWidth;
-
-/** 水平瀑布流 item等高不等宽 */
--(CGFloat)waterFlowLayout:(WSLWaterFlowLayout *)waterFlowLayout widthForItemAtIndexPath:(NSIndexPath *)indexPath itemHeight:(CGFloat)itemHeight;
-
-/** 竖向瀑布流 item等高不等宽  列数、行数无用 */
+/**
+ 返回item的大小
+ 注意：根据当前的瀑布流样式需知的事项：
+ 当样式为WSLWaterFlowVerticalEqualWidth 传入的size.width无效 ，所以可以是任意值，因为内部会根据样式自己计算布局
+ WSLWaterFlowHorizontalEqualHeight 传入的size.height无效 ，所以可以是任意值 ，因为内部会根据样式自己计算布局
+ WSLWaterFlowHorizontalGrid   传入的size宽高都有效， 此时返回列数、行数的代理方法无效，
+ WSLWaterFlowVerticalEqualHeight 传入的size宽高都有效， 此时返回列数、行数的代理方法无效
+ */
 - (CGSize)waterFlowLayout:(WSLWaterFlowLayout *)waterFlowLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath;
 
 /** 头视图Size */
@@ -80,6 +82,9 @@ typedef enum {
     _flow.flowLayoutStyle = WSLVerticalWaterFlow;
 ```
 >更新于2018/8/12：   新增样式4-栅格布局样式的瀑布流，如下图
+简书地址：https://www.jianshu.com/p/f40bbe437265
+
+
 
 ![栅格布局样式](https://upload-images.jianshu.io/upload_images/1708447-baecc8e82b7c2eae.gif?imageMogr2/auto-orient/strip)
 
