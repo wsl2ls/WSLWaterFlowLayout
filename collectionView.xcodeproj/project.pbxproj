@@ -20,13 +20,14 @@
 		316638D11F945965008137BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 316638D01F945965008137BD /* main.m */; };
 		316638DB1F945966008137BD /* collectionViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 316638DA1F945966008137BD /* collectionViewTests.m */; };
 		316638E61F945966008137BD /* collectionViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 316638E51F945966008137BD /* collectionViewUITests.m */; };
-		316638F91F948478008137BD /* waterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 316638F71F948478008137BD /* waterCollectionViewCell.m */; };
-		316638FA1F948478008137BD /* waterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 316638F81F948478008137BD /* waterCollectionViewCell.xib */; };
 		316638FF1F948EEE008137BD /* WSLWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 316638FE1F948EEE008137BD /* WSLWaterFlowLayout.m */; };
 		317C217A21200400007EBF96 /* WSLWaterFlowHorizontalGrid.plist in Resources */ = {isa = PBXBuildFile; fileRef = 317C217921200400007EBF96 /* WSLWaterFlowHorizontalGrid.plist */; };
 		31B6F2691FB0066C000D6A30 /* UIButton+WSLTitleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B6F2681FB0066C000D6A30 /* UIButton+WSLTitleImage.m */; };
-		31CFF0CF1F9749000078C991 /* CollectionHeaderAndFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31CFF0CD1F9749000078C991 /* CollectionHeaderAndFooterView.m */; };
-		31CFF0D01F9749000078C991 /* CollectionHeaderAndFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31CFF0CE1F9749000078C991 /* CollectionHeaderAndFooterView.xib */; };
+		31EE0E4C215E0EF1003DF8B7 /* CollectionHeaderAndFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EE0E47215E0EF1003DF8B7 /* CollectionHeaderAndFooterView.m */; };
+		31EE0E4D215E0EF1003DF8B7 /* CollectionHeaderAndFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31EE0E48215E0EF1003DF8B7 /* CollectionHeaderAndFooterView.xib */; };
+		31EE0E4E215E0EF1003DF8B7 /* waterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EE0E4A215E0EF1003DF8B7 /* waterCollectionViewCell.m */; };
+		31EE0E4F215E0EF1003DF8B7 /* waterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31EE0E4B215E0EF1003DF8B7 /* waterCollectionViewCell.xib */; };
+		31EE0E53215E0F89003DF8B7 /* WSLFlowLayoutStyleOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EE0E52215E0F89003DF8B7 /* WSLFlowLayoutStyleOne.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,17 +69,19 @@
 		316638E11F945966008137BD /* collectionViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = collectionViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		316638E51F945966008137BD /* collectionViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = collectionViewUITests.m; sourceTree = "<group>"; };
 		316638E71F945966008137BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		316638F61F948478008137BD /* waterCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = waterCollectionViewCell.h; sourceTree = "<group>"; };
-		316638F71F948478008137BD /* waterCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = waterCollectionViewCell.m; sourceTree = "<group>"; };
-		316638F81F948478008137BD /* waterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = waterCollectionViewCell.xib; sourceTree = "<group>"; };
 		316638FD1F948EEE008137BD /* WSLWaterFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSLWaterFlowLayout.h; sourceTree = "<group>"; };
 		316638FE1F948EEE008137BD /* WSLWaterFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSLWaterFlowLayout.m; sourceTree = "<group>"; };
 		317C217921200400007EBF96 /* WSLWaterFlowHorizontalGrid.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = WSLWaterFlowHorizontalGrid.plist; sourceTree = "<group>"; };
 		31B6F2671FB0066C000D6A30 /* UIButton+WSLTitleImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+WSLTitleImage.h"; sourceTree = "<group>"; };
 		31B6F2681FB0066C000D6A30 /* UIButton+WSLTitleImage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+WSLTitleImage.m"; sourceTree = "<group>"; };
-		31CFF0CC1F9749000078C991 /* CollectionHeaderAndFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionHeaderAndFooterView.h; sourceTree = "<group>"; };
-		31CFF0CD1F9749000078C991 /* CollectionHeaderAndFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionHeaderAndFooterView.m; sourceTree = "<group>"; };
-		31CFF0CE1F9749000078C991 /* CollectionHeaderAndFooterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionHeaderAndFooterView.xib; sourceTree = "<group>"; };
+		31EE0E46215E0EF1003DF8B7 /* CollectionHeaderAndFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionHeaderAndFooterView.h; sourceTree = "<group>"; };
+		31EE0E47215E0EF1003DF8B7 /* CollectionHeaderAndFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionHeaderAndFooterView.m; sourceTree = "<group>"; };
+		31EE0E48215E0EF1003DF8B7 /* CollectionHeaderAndFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionHeaderAndFooterView.xib; sourceTree = "<group>"; };
+		31EE0E49215E0EF1003DF8B7 /* waterCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = waterCollectionViewCell.h; sourceTree = "<group>"; };
+		31EE0E4A215E0EF1003DF8B7 /* waterCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = waterCollectionViewCell.m; sourceTree = "<group>"; };
+		31EE0E4B215E0EF1003DF8B7 /* waterCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = waterCollectionViewCell.xib; sourceTree = "<group>"; };
+		31EE0E51215E0F89003DF8B7 /* WSLFlowLayoutStyleOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSLFlowLayoutStyleOne.h; sourceTree = "<group>"; };
+		31EE0E52215E0F89003DF8B7 /* WSLFlowLayoutStyleOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSLFlowLayoutStyleOne.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,21 +142,15 @@
 				316638C21F945965008137BD /* AppDelegate.m */,
 				316638C41F945965008137BD /* ViewController.h */,
 				316638C51F945965008137BD /* ViewController.m */,
+				316638FD1F948EEE008137BD /* WSLWaterFlowLayout.h */,
+				316638FE1F948EEE008137BD /* WSLWaterFlowLayout.m */,
+				31EE0E50215E0F09003DF8B7 /* VC */,
+				31EE0E45215E0EF1003DF8B7 /* view */,
 				316638C71F945965008137BD /* Main.storyboard */,
 				316638CA1F945965008137BD /* Assets.xcassets */,
 				316638CC1F945965008137BD /* LaunchScreen.storyboard */,
 				316638CF1F945965008137BD /* Info.plist */,
 				316638D01F945965008137BD /* main.m */,
-				316638F61F948478008137BD /* waterCollectionViewCell.h */,
-				316638F71F948478008137BD /* waterCollectionViewCell.m */,
-				316638F81F948478008137BD /* waterCollectionViewCell.xib */,
-				316638FD1F948EEE008137BD /* WSLWaterFlowLayout.h */,
-				316638FE1F948EEE008137BD /* WSLWaterFlowLayout.m */,
-				31CFF0CC1F9749000078C991 /* CollectionHeaderAndFooterView.h */,
-				31CFF0CD1F9749000078C991 /* CollectionHeaderAndFooterView.m */,
-				31CFF0CE1F9749000078C991 /* CollectionHeaderAndFooterView.xib */,
-				31B6F2671FB0066C000D6A30 /* UIButton+WSLTitleImage.h */,
-				31B6F2681FB0066C000D6A30 /* UIButton+WSLTitleImage.m */,
 			);
 			path = collectionView;
 			sourceTree = "<group>";
@@ -174,6 +171,30 @@
 				316638E71F945966008137BD /* Info.plist */,
 			);
 			path = collectionViewUITests;
+			sourceTree = "<group>";
+		};
+		31EE0E45215E0EF1003DF8B7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				31B6F2671FB0066C000D6A30 /* UIButton+WSLTitleImage.h */,
+				31B6F2681FB0066C000D6A30 /* UIButton+WSLTitleImage.m */,
+				31EE0E46215E0EF1003DF8B7 /* CollectionHeaderAndFooterView.h */,
+				31EE0E47215E0EF1003DF8B7 /* CollectionHeaderAndFooterView.m */,
+				31EE0E48215E0EF1003DF8B7 /* CollectionHeaderAndFooterView.xib */,
+				31EE0E49215E0EF1003DF8B7 /* waterCollectionViewCell.h */,
+				31EE0E4A215E0EF1003DF8B7 /* waterCollectionViewCell.m */,
+				31EE0E4B215E0EF1003DF8B7 /* waterCollectionViewCell.xib */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		31EE0E50215E0F09003DF8B7 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				31EE0E51215E0F89003DF8B7 /* WSLFlowLayoutStyleOne.h */,
+				31EE0E52215E0F89003DF8B7 /* WSLFlowLayoutStyleOne.m */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,11 +303,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31CFF0D01F9749000078C991 /* CollectionHeaderAndFooterView.xib in Resources */,
 				316638CE1F945965008137BD /* LaunchScreen.storyboard in Resources */,
 				317C217A21200400007EBF96 /* WSLWaterFlowHorizontalGrid.plist in Resources */,
+				31EE0E4D215E0EF1003DF8B7 /* CollectionHeaderAndFooterView.xib in Resources */,
 				316638CB1F945965008137BD /* Assets.xcassets in Resources */,
-				316638FA1F948478008137BD /* waterCollectionViewCell.xib in Resources */,
+				31EE0E4F215E0EF1003DF8B7 /* waterCollectionViewCell.xib in Resources */,
 				316638C91F945965008137BD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,15 +334,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				311CF03D1FBE8BAA00341F10 /* CD@2x.png in Sources */,
+				31EE0E53215E0F89003DF8B7 /* WSLFlowLayoutStyleOne.m in Sources */,
 				311CF03E1FBE8BAA00341F10 /* CD@3x.png in Sources */,
 				311CF03F1FBE8BAA00341F10 /* Logo@2x.png in Sources */,
 				311CF0401FBE8BAA00341F10 /* Logo@3x.png in Sources */,
 				3105466F1F95959E00E5E770 /* 11.png in Sources */,
+				31EE0E4C215E0EF1003DF8B7 /* CollectionHeaderAndFooterView.m in Sources */,
 				316638C61F945965008137BD /* ViewController.m in Sources */,
 				316638D11F945965008137BD /* main.m in Sources */,
+				31EE0E4E215E0EF1003DF8B7 /* waterCollectionViewCell.m in Sources */,
 				31B6F2691FB0066C000D6A30 /* UIButton+WSLTitleImage.m in Sources */,
-				31CFF0CF1F9749000078C991 /* CollectionHeaderAndFooterView.m in Sources */,
-				316638F91F948478008137BD /* waterCollectionViewCell.m in Sources */,
 				316638FF1F948EEE008137BD /* WSLWaterFlowLayout.m in Sources */,
 				316638C31F945965008137BD /* AppDelegate.m in Sources */,
 			);
