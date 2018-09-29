@@ -14,6 +14,7 @@
 @interface WSLWaterFlowLayoutStyleOne ()<UICollectionViewDelegate, UICollectionViewDataSource,WSLWaterFlowLayoutDelegate>
 {
     WSLWaterFlowLayout * _flow;
+    NSMutableArray * _array;
 }
 @end
 
@@ -24,6 +25,11 @@
     
     self.navigationItem.title =  [NSString stringWithFormat:@"样式%d",self.flowLayoutStyle];
     self.view.backgroundColor = [UIColor grayColor];
+    
+    _array = [NSMutableArray array];
+    for (int i = 0 ; i < 2 * 30; i++) {
+        [_array addObject:@(arc4random()%200)];
+    }
     
     _flow = [[WSLWaterFlowLayout alloc] init];
     _flow.delegate = self;
@@ -73,11 +79,11 @@
 //返回每个item大小
 - (CGSize)waterFlowLayout:(WSLWaterFlowLayout *)waterFlowLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
     if(waterFlowLayout.flowLayoutStyle == (WSLWaterFlowLayoutStyle)0){
-        return CGSizeMake(0, arc4random() % 200);
+        return CGSizeMake(0, [_array[indexPath.section * 10 + indexPath.row] floatValue]);
     }else if (waterFlowLayout.flowLayoutStyle == (WSLWaterFlowLayoutStyle)1){
-        return CGSizeMake(arc4random() % 200, 0);
+        return CGSizeMake([_array[indexPath.section * 10 + indexPath.row] floatValue], 0);
     }else if (waterFlowLayout.flowLayoutStyle == (WSLWaterFlowLayoutStyle)2){
-        return CGSizeMake(arc4random() % 200, 100);
+        return CGSizeMake([_array[indexPath.section * 10 + indexPath.row] floatValue], 100);
     }else if (waterFlowLayout.flowLayoutStyle == (WSLWaterFlowLayoutStyle)3){
         //每一个最小的正方形单元格的边长
         CGFloat  average = (self.view.frame.size.width - [self edgeInsetInWaterFlowLayout:waterFlowLayout].left * 2 - 3 * [self columnMarginInWaterFlowLayout:waterFlowLayout])/4.0;
@@ -130,7 +136,7 @@
     if (_flow.flowLayoutStyle == (WSLWaterFlowLayoutStyle)3){
         return 1;
     }
-    return 3;
+    return _array.count/10;
 }
 
 //组内成员个数
