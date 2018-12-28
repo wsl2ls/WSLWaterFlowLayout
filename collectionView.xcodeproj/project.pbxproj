@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3105466F1F95959E00E5E770 /* 11.png in Sources */ = {isa = PBXBuildFile; fileRef = 3105466E1F95957500E5E770 /* 11.png */; };
-		311CF03D1FBE8BAA00341F10 /* CD@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 311CF03A1FBE8BA400341F10 /* CD@2x.png */; };
-		311CF03E1FBE8BAA00341F10 /* CD@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = 311CF03B1FBE8BA400341F10 /* CD@3x.png */; };
-		311CF03F1FBE8BAA00341F10 /* Logo@2x.png in Sources */ = {isa = PBXBuildFile; fileRef = 311CF0391FBE8BA300341F10 /* Logo@2x.png */; };
-		311CF0401FBE8BAA00341F10 /* Logo@3x.png in Sources */ = {isa = PBXBuildFile; fileRef = 311CF03C1FBE8BA400341F10 /* Logo@3x.png */; };
 		316638C31F945965008137BD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 316638C21F945965008137BD /* AppDelegate.m */; };
 		316638C61F945965008137BD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 316638C51F945965008137BD /* ViewController.m */; };
 		316638C91F945965008137BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 316638C71F945965008137BD /* Main.storyboard */; };
@@ -49,10 +45,6 @@
 
 /* Begin PBXFileReference section */
 		3105466E1F95957500E5E770 /* 11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 11.png; sourceTree = "<group>"; };
-		311CF0391FBE8BA300341F10 /* Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@2x.png"; sourceTree = "<group>"; };
-		311CF03A1FBE8BA400341F10 /* CD@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CD@2x.png"; sourceTree = "<group>"; };
-		311CF03B1FBE8BA400341F10 /* CD@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CD@3x.png"; sourceTree = "<group>"; };
-		311CF03C1FBE8BA400341F10 /* Logo@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Logo@3x.png"; sourceTree = "<group>"; };
 		316638BE1F945965008137BD /* collectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = collectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		316638C11F945965008137BD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		316638C21F945965008137BD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -132,10 +124,6 @@
 		316638C01F945965008137BD /* collectionView */ = {
 			isa = PBXGroup;
 			children = (
-				311CF03A1FBE8BA400341F10 /* CD@2x.png */,
-				311CF03B1FBE8BA400341F10 /* CD@3x.png */,
-				311CF0391FBE8BA300341F10 /* Logo@2x.png */,
-				311CF03C1FBE8BA400341F10 /* Logo@3x.png */,
 				3105466E1F95957500E5E770 /* 11.png */,
 				317C217921200400007EBF96 /* WSLWaterFlowHorizontalGrid.plist */,
 				316638C11F945965008137BD /* AppDelegate.h */,
@@ -333,11 +321,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				311CF03D1FBE8BAA00341F10 /* CD@2x.png in Sources */,
 				31EE0E53215E0F89003DF8B7 /* WSLFlowLayoutStyleOne.m in Sources */,
-				311CF03E1FBE8BAA00341F10 /* CD@3x.png in Sources */,
-				311CF03F1FBE8BAA00341F10 /* Logo@2x.png in Sources */,
-				311CF0401FBE8BAA00341F10 /* Logo@3x.png in Sources */,
 				3105466F1F95959E00E5E770 /* 11.png in Sources */,
 				31EE0E4C215E0EF1003DF8B7 /* CollectionHeaderAndFooterView.m in Sources */,
 				316638C61F945965008137BD /* ViewController.m in Sources */,
