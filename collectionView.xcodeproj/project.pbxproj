@@ -23,8 +23,7 @@
 		31EE0E4E215E0EF1003DF8B7 /* waterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EE0E4A215E0EF1003DF8B7 /* waterCollectionViewCell.m */; };
 		31EE0E4F215E0EF1003DF8B7 /* waterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31EE0E4B215E0EF1003DF8B7 /* waterCollectionViewCell.xib */; };
 		31EE0E53215E0F89003DF8B7 /* WSLFlowLayoutStyleOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 31EE0E52215E0F89003DF8B7 /* WSLFlowLayoutStyleOne.m */; };
-		31FCFFFD2241D58F00941E9D /* WSLWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FCFFFC2241D58F00941E9D /* WSLWaterFlowLayout.m */; };
-		31FCFFFE2241D5C200941E9D /* WSLWaterFlowLayout.h in Sources */ = {isa = PBXBuildFile; fileRef = 31FCFFFB2241D58F00941E9D /* WSLWaterFlowLayout.h */; };
+		31FC00422242406200941E9D /* WSLWaterFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FC00412242406200941E9D /* WSLWaterFlowLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +72,8 @@
 		31EE0E4B215E0EF1003DF8B7 /* waterCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = waterCollectionViewCell.xib; sourceTree = "<group>"; };
 		31EE0E51215E0F89003DF8B7 /* WSLFlowLayoutStyleOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSLFlowLayoutStyleOne.h; sourceTree = "<group>"; };
 		31EE0E52215E0F89003DF8B7 /* WSLFlowLayoutStyleOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSLFlowLayoutStyleOne.m; sourceTree = "<group>"; };
-		31FCFFFB2241D58F00941E9D /* WSLWaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLWaterFlowLayout.h; sourceTree = "<group>"; };
-		31FCFFFC2241D58F00941E9D /* WSLWaterFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLWaterFlowLayout.m; sourceTree = "<group>"; };
+		31FC00402242406200941E9D /* WSLWaterFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WSLWaterFlowLayout.h; sourceTree = "<group>"; };
+		31FC00412242406200941E9D /* WSLWaterFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WSLWaterFlowLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +104,7 @@
 		316638B51F945965008137BD = {
 			isa = PBXGroup;
 			children = (
+				31FC003F2242406200941E9D /* WSLWaterFlowLayout */,
 				316638C01F945965008137BD /* collectionView */,
 				316638D91F945965008137BD /* collectionViewTests */,
 				316638E41F945966008137BD /* collectionViewUITests */,
@@ -131,7 +131,6 @@
 				316638C21F945965008137BD /* AppDelegate.m */,
 				316638C41F945965008137BD /* ViewController.h */,
 				316638C51F945965008137BD /* ViewController.m */,
-				31FCFFFA2241D58F00941E9D /* WSLWaterFlowLayout */,
 				31EE0E50215E0F09003DF8B7 /* VC */,
 				31EE0E45215E0EF1003DF8B7 /* view */,
 				316638C71F945965008137BD /* Main.storyboard */,
@@ -185,11 +184,11 @@
 			path = VC;
 			sourceTree = "<group>";
 		};
-		31FCFFFA2241D58F00941E9D /* WSLWaterFlowLayout */ = {
+		31FC003F2242406200941E9D /* WSLWaterFlowLayout */ = {
 			isa = PBXGroup;
 			children = (
-				31FCFFFB2241D58F00941E9D /* WSLWaterFlowLayout.h */,
-				31FCFFFC2241D58F00941E9D /* WSLWaterFlowLayout.m */,
+				31FC00402242406200941E9D /* WSLWaterFlowLayout.h */,
+				31FC00412242406200941E9D /* WSLWaterFlowLayout.m */,
 			);
 			path = WSLWaterFlowLayout;
 			sourceTree = "<group>";
@@ -330,12 +329,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31FCFFFE2241D5C200941E9D /* WSLWaterFlowLayout.h in Sources */,
 				31EE0E53215E0F89003DF8B7 /* WSLFlowLayoutStyleOne.m in Sources */,
 				3105466F1F95959E00E5E770 /* 11.png in Sources */,
 				31EE0E4C215E0EF1003DF8B7 /* CollectionHeaderAndFooterView.m in Sources */,
 				316638C61F945965008137BD /* ViewController.m in Sources */,
-				31FCFFFD2241D58F00941E9D /* WSLWaterFlowLayout.m in Sources */,
+				31FC00422242406200941E9D /* WSLWaterFlowLayout.m in Sources */,
 				316638D11F945965008137BD /* main.m in Sources */,
 				31EE0E4E215E0EF1003DF8B7 /* waterCollectionViewCell.m in Sources */,
 				31B6F2691FB0066C000D6A30 /* UIButton+WSLTitleImage.m in Sources */,
