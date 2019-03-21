@@ -1,3 +1,6 @@
+支持 pod 'WSLWaterFlowLayout', '~>1.0.1'
+
+
 简书地址：https://www.jianshu.com/p/9fafd89c97ad
 
 ![瀑布流](https://upload-images.jianshu.io/upload_images/1708447-8f235c82675a23c4.gif?imageMogr2/auto-orient/strip)
