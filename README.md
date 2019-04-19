@@ -1,5 +1,10 @@
-支持 pod 'WSLWaterFlowLayout', '~>1.0.1'
+# WSLWaterFlowLayout
 
+![](https://img.shields.io/badge/license-MIT%20-green.svg)
+![](https://img.shields.io/badge/pod-v1.0.1%20-blue.svg)
+![](https://img.shields.io/badge/platform-iOS-orange.svg)
+![](https://img.shields.io/badge/support-iOS8%2B-brightgreen.svg)
+![](https://img.shields.io/badge/build-passing-green.svg)
 
 简书地址：https://www.jianshu.com/p/9fafd89c97ad
 
@@ -93,4 +98,8 @@ typedef enum {
 
 ![赞.gif](http://upload-images.jianshu.io/upload_images/1708447-ce06388c244874ce.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+[GitHub项目README.md设置徽标（环境、build、下载量...）](https://blog.csdn.net/chenbetter1996/article/details/85099176)
 
+[GitHub上 README 增加图片标签](https://blog.csdn.net/yangbodong22011/article/details/51791085)
+
+[shields.io标签生成官网](https://shields.io/category/build)
