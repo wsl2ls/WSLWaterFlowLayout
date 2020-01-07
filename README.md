@@ -107,6 +107,14 @@ typedef enum {
 http://github.com/donggelaile/HDCollectionView.git
 
 
+## 推荐学习资料:
+
+> [Swift从入门到精通](https://ke.qq.com/course/392094?saleToken=1693443&from=pclink)
+
+> [恋上数据结构与算法（一）](https://ke.qq.com/course/385223?saleToken=1887678&from=pclink)
+
+> [恋上数据结构与算法（二）](https://ke.qq.com/course/421398?saleToken=1887679&from=pclink)
+
 ## Welcome To Follow Me
 
 >  您的follow和start，是我前进的动力，Thanks♪(･ω･)ﾉ
