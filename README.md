@@ -6,7 +6,7 @@
 ![](https://img.shields.io/badge/support-iOS8%2B-brightgreen.svg)
 ![](https://img.shields.io/badge/build-passing-green.svg)
 
-简书地址：https://www.jianshu.com/p/9fafd89c97ad
+简书地址：https://www.jianshu.com/p/9fafd89c97ad   （ 此库年久失修，不建议直接使用，可以学习看看）
 
 ![瀑布流](https://upload-images.jianshu.io/upload_images/1708447-8f235c82675a23c4.gif?imageMogr2/auto-orient/strip)
 
